@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Images / large binaries
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.stl
+*.step
+*.iges
+*.f3d
+
+# Temp files
+*.tmp
+*.bak
