@@ -24,3 +24,7 @@
 ## [2026-06-15] create | Analisi CAD con Hermes
 - Created concepts/analisi-cad-con-hermes.md — Fusion MCP vs trimesh, setup LAN, roadmap Automation MCP cloud
 - Updated index.md with 5 pages total
+
+## [2026-06-22] create | Analisi cuscinetto a sfere (bearing v10)
+- Created concepts/cuscinetto-sfere-design-analysis.md — analisi dimensionale da Fusion 360: parametri, 3 corpi, sequenza costruttiva, problema d_ball 4.5mm vs sfere reali 4mm
+- Updated index.md with 6 pages total

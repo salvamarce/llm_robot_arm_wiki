@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-16 | Total pages: 4
+> Last updated: 2026-06-22 | Total pages: 5
 
 ## Entities
 - [[mks-servo42d]] — Modulo stepper closed-loop CAN bus, scelto per il braccio robotico
@@ -11,6 +11,7 @@
 ## Concepts
 - [[cycloidal-drive]] — Riduttore epicicloidale a disco, variante a due dischi sfasati
 - [[analisi-cad-con-hermes]] — Come Hermes analizza file CAD: Fusion MCP vs trimesh, setup LAN
+- [[cuscinetto-sfere-design-analysis]] — Analisi dimensionale corona cuscinetto a sfere (bearing v10), parametri, geometria, problemi di scala
 
 ## Components
 
