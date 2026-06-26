@@ -28,3 +28,10 @@
 ## [2026-06-22] create | Analisi cuscinetto a sfere (bearing v10)
 - Created concepts/cuscinetto-sfere-design-analysis.md — analisi dimensionale da Fusion 360: parametri, 3 corpi, sequenza costruttiva, problema d_ball 4.5mm vs sfere reali 4mm
 - Updated index.md with 6 pages total
+
+## [2026-06-26] update | Rianalisi cuscinetto con sfere reali
+- Aggiornata analisi: sfere ADCSHOP 4.5 mm confermate → `d_ball` CORRETTO
+- Rimosso falso allarme 4 mm vs 4.5 mm
+- Aggiunta sezione: la corona è una gabbia (retainer), non pista di rotolamento
+- Aggiunto calcolo PCD reale per 26 sfere da 4.5 mm (~41 mm)
+- Aggiunta nota qualità BB vs sfere cuscinetto
