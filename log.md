@@ -29,6 +29,15 @@
 - Created concepts/cuscinetto-sfere-design-analysis.md — analisi dimensionale da Fusion 360: parametri, 3 corpi, sequenza costruttiva, problema d_ball 4.5mm vs sfere reali 4mm
 - Updated index.md with 6 pages total
 
+## [2026-06-28] obsidian | Convertito wiki in Obsidian vault
+- Added `.obsidian/` config: app.json, appearance.json, core-plugins.json, graph.json, community-plugins.json, hotkeys.json, types.json
+- Created `concepts/stepper-motor-control.md` — pagina mancante su controllo motori
+- Added `aliases` in frontmatter di tutte le pagine per linking flessibile
+- Rewritten `index.md` come home page vault con tabelle navigabili
+- Updated SCHEMA.md: aggiunta convenzione aliases
+- Updated .gitignore: esclusi workspace/cache di Obsidian
+- **Vault pronto:** aprilo in Obsidian per vedere il grafo completo
+
 ## [2026-06-26] update | Rianalisi cuscinetto con sfere reali
 - Aggiornata analisi: sfere ADCSHOP 4.5 mm confermate → `d_ball` CORRETTO
 - Rimosso falso allarme 4 mm vs 4.5 mm

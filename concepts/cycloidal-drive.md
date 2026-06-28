@@ -1,7 +1,8 @@
 ---
 title: Cycloidal Drive
+aliases: [cycloidal-drive, riduttore cycloidal, cycloidal gearbox, riduttore epicicloidale, riduttore a disco, two-disk cycloidal]
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-28
 type: concept
 tags: [cycloidal-drive, reducer, gearbox, 3d-printing, mechanics, torque, intermediate]
 confidence: high

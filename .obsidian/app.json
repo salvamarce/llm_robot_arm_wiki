@@ -1,0 +1,16 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "assets",
+  "newFileLocation": "current",
+  "newLinkFormat": "shortest",
+  "showLineNumber": true,
+  "spellcheck": false,
+  "useMarkdownLinks": false,
+  "showFrontmatter": true,
+  "showIndentGuide": true,
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "tabSize": 4,
+  "strictLineBreaks": false
+}

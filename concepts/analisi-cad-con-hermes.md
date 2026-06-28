@@ -1,7 +1,8 @@
 ---
 title: Analisi CAD con Hermes
+aliases: [analisi-cad-con-hermes, CAD analysis, Fusion MCP, Hermes CAD, analisi CAD, Fusion 360 MCP]
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-28
 type: concept
 tags: [cad, fusion-360, mcp, analysis, workflow, planning]
 confidence: high

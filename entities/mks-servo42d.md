@@ -1,7 +1,8 @@
 ---
 title: MKS SERVO42D — Modulo stepper closed-loop CAN
+aliases: [mks-servo42d, SERVO42D, MKS SERVO42D, driver stepper CAN, closed-loop stepper, Makerbase servo]
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-28
 type: entity
 tags: [stepper-driver, closed-loop, can-bus, mks-servo42d, hardware]
 confidence: high

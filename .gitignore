@@ -20,6 +20,8 @@ Thumbs.db
 *.iges
 *.f3d
 
-# Temp files
-*.tmp
-*.bak
+# Obsidian workspace (personal state, don't share)
+.obsidian/workspace*
+.obsidian/cache/
+.obsidian/plugins/better-word-count/
+

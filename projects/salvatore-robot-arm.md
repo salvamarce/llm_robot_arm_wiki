@@ -1,7 +1,8 @@
 ---
 title: Braccio Robotico DIY di Salvatore
+aliases: [salvatore-robot-arm, robot arm, braccio robotico, Salvatore Robot Arm, braccio DIY, 4-DOF arm]
 created: 2026-06-15
-updated: 2026-06-16
+updated: 2026-06-28
 type: project
 tags: [in-progress, arduino, stepper-motor, nema-17, cycloidal-drive, 3d-printing, 4-dof, closed-loop, can-bus]
 confidence: high

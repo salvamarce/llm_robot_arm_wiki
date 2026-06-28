@@ -1,7 +1,8 @@
 ---
 title: NEMA 17
+aliases: [nema-17, NEMA17, motore passo-passo, stepper motor, 17HS series, 42mm stepper]
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-28
 type: entity
 tags: [stepper-motor, nema-17, mechanics, torque, beginner]
 confidence: high

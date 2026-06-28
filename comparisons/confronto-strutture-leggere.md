@@ -1,7 +1,8 @@
 ---
 title: Confronto Bracci Robotici 3D Stampati — Strutture Leggere
+aliases: [confronto-strutture-leggere, lightweight arm comparison, THOR vs Forte, CyBot, bracci 3D stampati confronto, struttura leggera braccio]
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-28
 type: comparison
 tags: [comparison, 3d-printing, structure, lightweight, beginner, intermediate]
 confidence: high

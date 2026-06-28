@@ -7,6 +7,7 @@ DIY Robotic Arm — costruzione, progettazione e programmazione di bracci roboti
 - File names: lowercase, hyphens, no spaces (e.g., `stepper-motor-control.md`)
 - Every wiki page starts with YAML frontmatter (see below)
 - Use `[[wikilinks]]` to link between pages (minimum 2 outbound links per page)
+- Add `aliases: [nome-alias1, nome-alias2]` in frontmatter per nomi alternativi (plurale, inglese/italiano, abbreviazioni)
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md` under the correct section
 - Every action must be appended to `log.md`

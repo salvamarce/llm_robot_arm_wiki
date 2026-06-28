@@ -1,0 +1,11 @@
+{
+  "types": {
+    "entity": "#e07020",
+    "concept": "#d3869b",
+    "project": "#458588",
+    "comparison": "#b8bb26",
+    "component": "#83a598",
+    "query": "#fe8019",
+    "meta": "#a89984"
+  }
+}

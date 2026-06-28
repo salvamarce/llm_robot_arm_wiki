@@ -1,7 +1,8 @@
 ---
 title: Analisi Design Cuscinetto a Sfere (Fusion 360)
+aliases: [cuscinetto-sfere-design-analysis, bearing analysis, cuscinetto a sfere, bearing v10, ball bearing design, retainer analysis]
 created: 2026-06-22
-updated: 2026-06-26
+updated: 2026-06-28
 type: concept
 tags: [bearings, cad, fusion-360, design-analysis, bearing-v10, ball-bearing]
 confidence: high
