@@ -94,6 +94,14 @@ Verifica: R/(E·N) = 32/(1.0×21) = **1.52 > 1** ✅ profilo valido (nessun cusp
 3. ⬜ Verificare interferenze con simulazione
 4. ⬜ Stampare prototipo e testare
 
+## Script Fusion 360
+
+Script Python parametrico per generare il riduttore in Fusion 360 via MCP:
+
+`scripts/generate_cycloidal.py`
+
+Eseguire con `fusion_mcp_execute` → `featureType: "script"`.
+
 ## Related
 
 - [[salvatore-robot-arm]] — Progetto braccio completo
