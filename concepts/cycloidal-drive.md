@@ -1,59 +1,101 @@
 ---
-title: Cycloidal Drive
+title: Cycloidal Drive — Progetto Spalla
 aliases: [cycloidal-drive, riduttore cycloidal, cycloidal gearbox, riduttore epicicloidale, riduttore a disco, two-disk cycloidal]
 created: 2026-06-15
-updated: 2026-06-28
+updated: 2026-06-30
 type: concept
-tags: [cycloidal-drive, reducer, gearbox, 3d-printing, mechanics, torque, intermediate]
+tags: [cycloidal-drive, reducer, gearbox, 3d-printing, mechanics, torque, intermediate, shoulder-joint, 20-1]
 confidence: high
 ---
 
-# Cycloidal Drive
+# Cycloidal Drive — Riduttore per Giunto di Spalla
 
-Riduttore epicicloidale a disco cycloidale. Usa un disco eccentricamente montato che rotola all'interno di una corona di perni, producendo un rapporto di riduzione alto con gioco ridotto e coppia elevata.
+Riduttore cicloidale 20:1 progettato per il giunto **J2 (spalla)** del braccio robotico. Variante a due dischi eccentrici sfasati 180° per bilanciamento dinamico.
 
-## Principio di Funzionamento
+## Specifiche di Progetto
 
-1. Un disco con profilo a cicloide è montato su un eccentrico sull'albero di ingresso
-2. Il disco ruota all'interno di una corona fissa di rulli/perni
-3. Il movimento cycloidale del disco viene convertito in rotazione dell'albero di uscita tramite perni di trasmissione
-4. Rapporto di riduzione: tipicamente 10:1 a 100:1 per stadio
+| Parametro | Valore | Note |
+|-----------|--------|------|
+| **Rapporto** | **20:1** | Z<sub>c</sub> = 20 lobi, Z<sub>r</sub> = 21 rulli |
+| **Eccentricità (E)** | **1.0 mm** | Hole perni output = D<sub>pin</sub> + 2×E = 10 mm |
+| **Pitch radius rulli (R)** | **32 mm** | Corona OD ≈ 76 mm |
+| **Raggio rulli (Rr)** | **2 mm** | Rulli in acciaio Ø4×10 mm |
+| **N. rulli corona** | **21** | In acciaio per cuscinetti (bearing steel, HRC 58-62) |
+| **N. perni output** | **6** | Tubo alluminio Ø8×6 mm, M4 passante |
+| **N. dischi** | **2** | Sfasati 180°, spessore 5 mm ciascuno |
+| **Cuscinetti eccentrici** | **2× 6801-ZZ** | 12×21×5 mm |
+| **Albero motore** | **Ø5 mm** | NEMA 17, cilindrico senza spianata |
+| **Bloccaggio albero** | **Morsetto split** | 2× viti M3 |
+| **Materiale dischi** | PETG | Stampato 3D |
+| **Materiale corona** | PETG + inserti Al Ø8 | Oppure solo PETG (cupole stampate) |
+| **Efficienza stimata** | ~70-75% | Con rulli acciaio rotanti |
+| **Torque output** | ~7.5 Nm | Con NEMA 17 lungo (0.50 Nm × 20 × 0.75) |
 
-## Vantaggi per Robotica DIY
+## Parametri Cinematici
 
-- **Rapporto alto in ingombro ridotto** — 30:1 in un disco spesso 10 mm
-- **Gioco (backlash) minimo** — grazie al contatto multiplo dei rulli
-- **Coppia elevata** — molti denti in presa contemporaneamente
-- **Stampa 3D friendly** — geometria realizzabile in PLA/PETG/ABS
-- **Assorbimento urti** — buona tolleranza a picchi di carico
+### Equazioni del profilo cicloide
 
-## Variante a Due Dischi (Salvatore)
+```
+Parametri:
+  N = 21         (numero rulli corona)
+  R = 32 mm      (pitch circle radius rulli)
+  Rr = 2 mm      (raggio rullo = Ø4/2)
+  E = 1.0 mm     (eccentricità)
 
-Progettazione con **due dischi centrici sfasati** per bilanciamento dinamico:
+ψ(t) = atan2(sin((1-N)·t), (R/(E·N)) - cos((1-N)·t))
 
-- Disco 1 e Disco 2 montati a 180° di fase
-- Le masse eccentriche si compensano reciprocamente
-- **Riduzione vibrazioni** rispetto al singolo disco
-- Coppia trasmessa da entrambi i dischi — ridondanza e maggiore robustezza
-- Assemblaggio più complesso ma risultato più silenzioso e fluido
+X(t) = R·cos(t) - Rr·cos(t + ψ(t)) - E·cos(N·t)
+Y(t) = -R·sin(t) + Rr·sin(t + ψ(t)) + E·sin(N·t)
 
-## Design Parameters
+t ∈ [0, 2π)
+```
 
-| Parametro | Considerazione |
-|-----------|---------------|
-| Rapporto | Determina coppia in uscita e velocità massima |
-| Eccentricità | Maggiore eccentricità = più coppia ma più vibrazioni |
-| Diametro rulli | Influenza gioco e capacità di carico |
-| Materiale | PLA/PETG per prototipi, ABS/Polycarbonate per uso continuativo |
-| Tolleranze | Critiche — troppo gioco = backlash, troppo stretto = grippaggio |
+Verifica: R/(E·N) = 32/(1.0×21) = **1.52 > 1** ✅ profilo valido (nessun cuspide).
 
-## Progettazione e Stampa
+## Dimensioni del Riduttore
 
-- File STL/STEP da generare con strumenti parametrici (es. Cycloidal Gear Generator online, o script Python)
-- Post-processing: fori calibrati, levigatura superfici di contatto
-- Lubrificazione: grasso al litio o PTFE per ridurre attrito PLA-PLA
+```
+                  ┌──────────────────┐
+     76 mm OD ←───┤  Corona esterna  │
+                  │  (PETG stampato)  │
+                  │   ┌─────────┐    │
+                  │   │ Dischi  │    │  ← 26 mm spessore totale
+                  │   │ 5+5 mm  │    │    (base 16 + dischi + piastra)
+                  │   └─────────┘    │
+                  │  6× perni Al Ø8  │
+                  └──────────────────┘
+                  NEMA 17 footprint 42×42 mm
+```
+
+## Componenti Acquistati / Reperiti
+
+| Componente | Specifica | Fonte | Costo |
+|---|---|---|---|
+| Rulli acciaio | Bearing steel Ø4×10 mm, 100 pz | Amazon.it (sourcing map) | ~€14 |
+| Cuscinetti eccentrici | 6801-ZZ (12×21×5) | Amazon.it | ~€5 cad. |
+| Perni output alluminio | Tubo Ø8×6 mm, profilato Leroy Merlin | Già tagliati (6 pz) | €3 |
+| Viti M4 passante | Per perni output e rulli corona | Già possedute | — |
+| Viti M3 morsetto | Per bloccaggio albero motore | Da acquistare | ~€3 |
+| Albero motore | NEMA 17 Ø5 cilindrico | In dotazione col motore | — |
+
+## Relazione con Altri Giunti
+
+| Giunto | Rapporto | Motore | Note |
+|---|---|---|---|
+| **J2 (spalla)** | **20:1** | NEMA 17 lungo | **Questo progetto** |
+| J3 (gomito) | da definire | NEMA 17 lungo | Rapporto diverso (carico minore) |
+| J1 (base) | da definire | NEMA 17 corto | Asse verticale |
+| J4 (polso) | da definire | NEMA 17 corto | Carico minimo |
+
+## Prossimi Passi
+
+1. ⬜ Generare script parametrico Python per Fusion 360 via MCP
+2. ⬜ Creare dischi cicloidali + corona in Fusion
+3. ⬜ Verificare interferenze con simulazione
+4. ⬜ Stampare prototipo e testare
 
 ## Related
-- [[nema-17]] — motori tipici abbinate a cycloidal drive
-- [[salvatore-robot-arm]] — progetto che usa questa variante a due dischi
-- Concept: rapporto di riduzione, coppia, backlash, eccentricità, bilanciamento dinamico
+
+- [[salvatore-robot-arm]] — Progetto braccio completo
+- [[nema-17]] — Motori passo-passo
+- [[mks-servo42d]] — Driver closed-loop

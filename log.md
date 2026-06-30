@@ -44,3 +44,9 @@
 - Aggiunta sezione: la corona è una gabbia (retainer), non pista di rotolamento
 - Aggiunto calcolo PCD reale per 26 sfere da 4.5 mm (~41 mm)
 - Aggiunta nota qualità BB vs sfere cuscinetto
+
+## [2026-06-30] update | Cycloidal drive J2: parametri finali
+- Updated concepts/cycloidal-drive.md — specifiche complete 20:1, R=32, E=1.0, rulli bearing steel Ø4×10
+- Updated projects/salvatore-robot-arm.md — ratio 20:1 (da 25:1), nuovi parametri, roadmap aggiornata
+- sourcing map 100pcs 4x10 bearing steel pins acquistati su Amazon.it
+- Cuscinetti eccentrici 6801-ZZ (12×21×5)
